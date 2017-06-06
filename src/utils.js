@@ -457,7 +457,7 @@ function getWHIgnoreDisplay(...args) {
   const elem = args[0];
   // in case elem is window
   // elem.offsetWidth === undefined
-  if (elem.offsetWidth !== 0) {
+  if (elem && elem.offsetWidth !== 0) {
     val = getWH.apply(undefined, args);
   } else {
     swap(elem, cssShow, () => {
